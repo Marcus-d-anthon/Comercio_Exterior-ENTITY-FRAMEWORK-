@@ -22,8 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
     <Folder Include="Modelo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

@@ -3,10 +3,10 @@ using ComercioExterior.Modelo;
 
 namespace ComercioExterior
 {
-    public partial class frmPuertos : Form
+    public partial class frmClientes : Form
     {
 
-        public frmPuertos()
+        public frmClientes()
         {
             InitializeComponent();
         }
@@ -16,24 +16,19 @@ namespace ComercioExterior
             this.Close();
         }
 
-        private void frmPuertos_Load(object sender, EventArgs e)
-        {
-            var ListaPuerto = Utiles.context.Puertos.ToList();
-            grdPuertos.DataSource = ListaPuerto;
-        }
 
         public void CargarGrid()
         {
-            var ListarPuertos = Utiles.context.Puertos.ToList();
-            grdPuertos.DataSource = ListarPuertos;
+            var ListarClientes = Utiles.context.Clientes.ToList();
+            grdClientes.DataSource = ListarClientes;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmMantenimientoPuerto objFormulario = new frmMantenimientoPuerto();
+            frmMantenimientoClientes objFormulario = new frmMantenimientoClientes();
             objFormulario.ShowDialog();
-            var ListaPuerto = Utiles.context.Puertos.ToList();
-            grdPuertos.DataSource = ListaPuerto;
+            var ListaClientes = Utiles.context.Clientes.ToList();
+            grdClientes.DataSource = ListaClientes;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -43,7 +38,7 @@ namespace ComercioExterior
 
         private void Modificar()
         {
-            if (grdPuertos.RowCount <= 0)
+            if (grdClientes.RowCount <= 0)
             {
                 MessageBox.Show("No existen datos");
                 return;
@@ -51,10 +46,10 @@ namespace ComercioExterior
             else
             {   //CurrentRow: Se obtiene la fila seleccionada
                 //Value = object Convert.ToInt32 = integer
-                int id = Convert.ToInt32(grdPuertos.CurrentRow.Cells[0].Value);
-                frmMantenimientoPuerto objFormulario = new frmMantenimientoPuerto();
+                int id = Convert.ToInt32(grdClientes.CurrentRow.Cells[0].Value);
+                frmMantenimientoClientes objFormulario = new frmMantenimientoClientes();
 
-                objFormulario.IdPuerto = id;
+                objFormulario.IdClientes = id;
                 objFormulario.ShowDialog();
                 CargarGrid();
             }
@@ -62,18 +57,24 @@ namespace ComercioExterior
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (grdPuertos.RowCount <= 0)
+            if (grdClientes.RowCount <= 0)
             {
                 MessageBox.Show("No existen datos");
                 return;
             }
             else
             {
-                int id = Convert.ToInt32(grdPuertos.CurrentRow.Cells[0].Value);
-                Puerto objPuerto = new Puerto();
-                objPuerto.Estado = "I";
+                int id = Convert.ToInt32(grdClientes.CurrentRow.Cells[0].Value);
+                Puerto objClientes = new Puerto();
+                objClientes.Estado = "I";
 
             }
+        }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+            var ListaClientes = Utiles.context.Clientes.ToList();
+            grdClientes .DataSource = ListaClientes;
         }
     }
 }

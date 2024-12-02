@@ -1,6 +1,6 @@
 ﻿namespace ComercioExterior
 {
-    partial class frmMantenimientoPuerto
+    partial class frmMantenimientoClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grdMantenimientoPuertos = new Panel();
-            txtDescripcion = new TextBox();
-            txtCodigo = new TextBox();
+            grdMantenimientoClientes = new Panel();
+            txtApellidos = new TextBox();
+            label5 = new Label();
+            txtNombres = new TextBox();
+            txtCedula = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -39,38 +41,56 @@
             panel2 = new Panel();
             btnGrabar = new Button();
             btnCancelar = new Button();
-            grdMantenimientoPuertos.SuspendLayout();
+            grdMantenimientoClientes.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // grdMantenimientoPuertos
+            // grdMantenimientoClientes
             // 
-            grdMantenimientoPuertos.Controls.Add(txtDescripcion);
-            grdMantenimientoPuertos.Controls.Add(txtCodigo);
-            grdMantenimientoPuertos.Controls.Add(label4);
-            grdMantenimientoPuertos.Controls.Add(label3);
-            grdMantenimientoPuertos.Controls.Add(label2);
-            grdMantenimientoPuertos.Controls.Add(label1);
-            grdMantenimientoPuertos.Controls.Add(txtID);
-            grdMantenimientoPuertos.Dock = DockStyle.Top;
-            grdMantenimientoPuertos.Location = new Point(0, 0);
-            grdMantenimientoPuertos.Name = "grdMantenimientoPuertos";
-            grdMantenimientoPuertos.Size = new Size(431, 249);
-            grdMantenimientoPuertos.TabIndex = 0;
+            grdMantenimientoClientes.Controls.Add(txtApellidos);
+            grdMantenimientoClientes.Controls.Add(label5);
+            grdMantenimientoClientes.Controls.Add(txtNombres);
+            grdMantenimientoClientes.Controls.Add(txtCedula);
+            grdMantenimientoClientes.Controls.Add(label4);
+            grdMantenimientoClientes.Controls.Add(label3);
+            grdMantenimientoClientes.Controls.Add(label2);
+            grdMantenimientoClientes.Controls.Add(label1);
+            grdMantenimientoClientes.Controls.Add(txtID);
+            grdMantenimientoClientes.Dock = DockStyle.Top;
+            grdMantenimientoClientes.Location = new Point(0, 0);
+            grdMantenimientoClientes.Name = "grdMantenimientoClientes";
+            grdMantenimientoClientes.Size = new Size(431, 263);
+            grdMantenimientoClientes.TabIndex = 0;
             // 
-            // txtDescripcion
+            // txtApellidos
             // 
-            txtDescripcion.Location = new Point(184, 158);
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(128, 23);
-            txtDescripcion.TabIndex = 6;
+            txtApellidos.Location = new Point(184, 203);
+            txtApellidos.Name = "txtApellidos";
+            txtApellidos.Size = new Size(128, 23);
+            txtApellidos.TabIndex = 8;
             // 
-            // txtCodigo
+            // label5
             // 
-            txtCodigo.Location = new Point(184, 113);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(128, 23);
-            txtCodigo.TabIndex = 5;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(56, 203);
+            label5.Name = "label5";
+            label5.Size = new Size(91, 24);
+            label5.TabIndex = 7;
+            label5.Text = "Apellidos:";
+            // 
+            // txtNombres
+            // 
+            txtNombres.Location = new Point(184, 158);
+            txtNombres.Name = "txtNombres";
+            txtNombres.Size = new Size(128, 23);
+            txtNombres.TabIndex = 6;
+            // 
+            // txtCedula
+            // 
+            txtCedula.Location = new Point(184, 113);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(128, 23);
+            txtCedula.TabIndex = 5;
             // 
             // label4
             // 
@@ -79,7 +99,7 @@
             label4.Name = "label4";
             label4.Size = new Size(70, 24);
             label4.TabIndex = 4;
-            label4.Text = "Código:";
+            label4.Text = "Cédula:";
             // 
             // label3
             // 
@@ -88,7 +108,7 @@
             label3.Name = "label3";
             label3.Size = new Size(91, 24);
             label3.TabIndex = 3;
-            label3.Text = "Descripción:";
+            label3.Text = "Nombres:";
             // 
             // label2
             // 
@@ -106,7 +126,8 @@
             label1.Name = "label1";
             label1.Size = new Size(242, 28);
             label1.TabIndex = 1;
-            label1.Text = "Mantenimiento de los Puertos";
+            label1.Text = "Mantenimiento de los Clientes";
+            label1.Click += label1_Click;
             // 
             // txtID
             // 
@@ -121,9 +142,9 @@
             panel2.Controls.Add(btnGrabar);
             panel2.Controls.Add(btnCancelar);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 249);
+            panel2.Location = new Point(0, 263);
             panel2.Name = "panel2";
-            panel2.Size = new Size(431, 39);
+            panel2.Size = new Size(431, 41);
             panel2.TabIndex = 1;
             // 
             // btnGrabar
@@ -131,7 +152,7 @@
             btnGrabar.Dock = DockStyle.Right;
             btnGrabar.Location = new Point(241, 0);
             btnGrabar.Name = "btnGrabar";
-            btnGrabar.Size = new Size(91, 39);
+            btnGrabar.Size = new Size(91, 41);
             btnGrabar.TabIndex = 1;
             btnGrabar.Text = "Grabar";
             btnGrabar.UseVisualStyleBackColor = true;
@@ -142,32 +163,32 @@
             btnCancelar.Dock = DockStyle.Right;
             btnCancelar.Location = new Point(332, 0);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(99, 39);
+            btnCancelar.Size = new Size(99, 41);
             btnCancelar.TabIndex = 0;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // frmMantenimientoPuerto
+            // frmMantenimientoClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(431, 288);
+            ClientSize = new Size(431, 304);
             Controls.Add(panel2);
-            Controls.Add(grdMantenimientoPuertos);
-            Name = "frmMantenimientoPuerto";
+            Controls.Add(grdMantenimientoClientes);
+            Name = "frmMantenimientoClientes";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Mantenimiento Puertos";
-            Load += frmMantenimientoPuerto_Load;
-            grdMantenimientoPuertos.ResumeLayout(false);
-            grdMantenimientoPuertos.PerformLayout();
+            Text = "Mantenimiento Clientes";
+            Load += frmMantenimientoClientes_Load;
+            grdMantenimientoClientes.ResumeLayout(false);
+            grdMantenimientoClientes.PerformLayout();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel grdMantenimientoPuertos;
+        private Panel grdMantenimientoClientes;
         private Panel panel2;
         private Button btnGrabar;
         private Button btnCancelar;
@@ -176,7 +197,9 @@
         private TextBox txtID;
         private Label label4;
         private Label label3;
-        private TextBox txtDescripcion;
-        private TextBox txtCodigo;
+        private TextBox txtNombres;
+        private TextBox txtCedula;
+        private TextBox txtApellidos;
+        private Label label5;
     }
 }

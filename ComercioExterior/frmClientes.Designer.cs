@@ -1,6 +1,6 @@
 ﻿namespace ComercioExterior
 {
-    partial class frmPuertos
+    partial class frmClientes
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
-            grdPuertos = new DataGridView();
+            grdClientes = new DataGridView();
             btnSalir = new Button();
             btnEliminar = new Button();
             btnModificar = new Button();
             btnNuevo = new Button();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)grdPuertos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)grdClientes).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
-            panel2.Controls.Add(grdPuertos);
+            panel2.Controls.Add(grdClientes);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(611, 206);
             panel2.TabIndex = 1;
             // 
-            // grdPuertos
+            // grdClientes
             // 
-            grdPuertos.AllowUserToAddRows = false;
-            grdPuertos.AllowUserToDeleteRows = false;
-            grdPuertos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grdPuertos.Dock = DockStyle.Fill;
-            grdPuertos.Location = new Point(0, 0);
-            grdPuertos.Name = "grdPuertos";
-            grdPuertos.ReadOnly = true;
-            grdPuertos.Size = new Size(611, 206);
-            grdPuertos.TabIndex = 0;
+            grdClientes.AllowUserToAddRows = false;
+            grdClientes.AllowUserToDeleteRows = false;
+            grdClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grdClientes.Dock = DockStyle.Fill;
+            grdClientes.Location = new Point(0, 0);
+            grdClientes.Name = "grdClientes";
+            grdClientes.ReadOnly = true;
+            grdClientes.Size = new Size(611, 206);
+            grdClientes.TabIndex = 0;
             // 
             // btnSalir
             // 
@@ -103,7 +103,7 @@
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += btnNuevo_Click;
             // 
-            // frmPuertos
+            // frmClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -113,19 +113,19 @@
             Controls.Add(btnEliminar);
             Controls.Add(btnSalir);
             Controls.Add(panel2);
-            Name = "frmPuertos";
+            Name = "frmClientes";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Formularios Puertos";
-            Load += frmPuertos_Load;
+            Text = "Formularios Clientes";
+            Load += frmClientes_Load;
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)grdPuertos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)grdClientes).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel2;
-        private DataGridView grdPuertos;
+        private DataGridView grdClientes;
         private Button btnSalir;
         private Button btnEliminar;
         private Button btnModificar;
